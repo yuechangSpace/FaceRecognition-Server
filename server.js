@@ -50,8 +50,7 @@ app.use((req, res, next)=>{
 	})
 
 app.get('/', (req,res)=>{
-	db.select('*').from('users')
-	.then(users=>res.json(users))
+  res.json("Welcome!")
 })
 
 app.post('/register',(req,res)=>register.handleRegister(req,res,db))
