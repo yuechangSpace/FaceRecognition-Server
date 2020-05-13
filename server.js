@@ -13,7 +13,7 @@ const knex = require('knex')
 const db = knex({
   client: 'pg',
   connection: {
-    host : 'a11b1888-216c-439e-b91e-f926579b8662',
+    connectionString : process.env.DATABASE_URL,
     ssl:true
   }
 })
@@ -48,6 +48,7 @@ app.use((req, res, next)=>{
 	})
 
 app.get('/', (req,res)=>{
+  db.
   res.json("Welcome!")
 })
 
