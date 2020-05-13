@@ -13,10 +13,8 @@ const knex = require('knex')
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : 'test',
-    database : 'facerec'
+    host : 'a11b1888-216c-439e-b91e-f926579b8662',
+    ssl:true
   }
 })
 //PORT injected from bash

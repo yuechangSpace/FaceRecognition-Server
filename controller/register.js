@@ -15,7 +15,7 @@ const handleRegister = (req,res,db) =>{
 	.then(user=>res.json(user))
 	.catch(error=>{
 		console.log("Oooops "+error)
-		res.status(400).json("Oooops, it is  an exisiting email!")
+		res.status(400).json(error+"Oooops, it is  an exisiting email!")
 	})
 
 }
